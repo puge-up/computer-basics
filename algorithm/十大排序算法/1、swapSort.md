@@ -1,4 +1,4 @@
-算法题：请写一个交换排序算法，不限语言 C/C++/Java/Python。 
+算法题：交换排序算法
 
 ```cpp
 #include<stdio.h>
@@ -20,7 +20,6 @@ void swapSort(int *a, int count){
     int i;
     int j;
     int tmp;
-    
  
     for(i = 0; i < count; i++){
         for(j = 0; j < count-i-1; j++){
