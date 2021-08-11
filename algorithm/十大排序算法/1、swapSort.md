@@ -15,8 +15,7 @@ void showArray(int *a, int count){
  
     printf("\n");
 }
- 
- 
+
 void swapSort(int *a, int count){
     int i;
     int j;
