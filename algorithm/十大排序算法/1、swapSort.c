@@ -24,7 +24,7 @@ void swapSort(int *a, int count){
  
     for(i = 0; i < count; i++){
         for(j = 0; j < count-i-1; j++){
-            if(a[j] > a[j+1]){ //½«´óµÄÊý×Ö·ÅÔÚ×îºóÃæ
+            if(a[j] > a[j+1]){
                 tmp = a[j];
                 a[j] = a[j+1];
                 a[j+1] = tmp;
