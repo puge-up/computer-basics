@@ -19,7 +19,7 @@ void merge(int *a, int low, int mid, int high){
         return;
     }
  
-    //ÒÔÏÂ¶¼ÊÇ<=,ÒòÎª´«¹ýÀ´µÄ¶¼ÊÇÏÂ±ê£»
+    // 以下都是<=,因为传过来的都是下标；
     while(i <= mid && j <= high){
         if(a[i] < a[j]){
             a2[n++] = a[i];
@@ -43,7 +43,7 @@ void merge(int *a, int low, int mid, int high){
         j++;
     }
  
-    for(n = 0, i = low; i <= high; n++, i++){  //½«a2ÖÐµÄÔªËØ¸´ÖÆ»ØaÖÐ;
+    for(n = 0, i = low; i <= high; n++, i++){  // 将a2中的元素复制回a中;
         a[i] = a2[n];
     }
  

@@ -30,23 +30,23 @@ void siftDown(int *a, int count, int start){
     int i = start;
     int j = 2*i+1;
  
-    while(j < count){  //ËµÃ÷ÓÐ×ó×ÓÊ÷
-        if(j < count-1 && a[j] > a[j+1]){ //±íÊ¾´æÔÚÓÒº¢×ÓµÄÇé¿öÏÂ£»
-            j++;   //j£º±íÊ¾Ö¸Ïò×óÓÒ×ÓÊ÷ÖÐ×îÐ¡µÄÒ»¸ö
+    while(j < count){  // 说明有左子树
+        if(j < count-1 && a[j] > a[j+1]){ // 表示存在右孩子的情况下；
+            j++;   // j：表示指向左右子树中最小的一个
         }
         if(a[i] <= a[j]){
-            break;  //²»ÓÃµ÷Õû£¬¸¸½ÚµãµÄÖµÊÇ×îÐ¡µÄ£»
+            break;  // 不用调整，父节点的值是最小的；
         }else{
             swap(&a[i], &a[j]);
-            //½»»»
-            i = j; //Ò»Ö±ÍùÊ÷ÏÂ½»»»£¬Ò»Ö±µ÷Õûµ½Ò¶×Ó½áµã
+            // 交换
+            i = j;  // 一直往树下交换，一直调整到叶子结点
             j = 2*i+1;
         }
     }
 }
  
 void heapSort(int *a, int count){
-    int curPos = count/2-1; //×îºóÒ»¸ö·ÇÒ¶×Ó½áµã
+    int curPos = count/2-1; // 最后一个非叶子结点
     int i;
     int key;
  
@@ -54,7 +54,7 @@ void heapSort(int *a, int count){
         siftDown(a, count, curPos);
         curPos--;
     }
-/*  Êä³ö¹¹½¨ºÃµÄ¶Ñ½á¹¹
+/*  输出构建好的堆结构
     for(i = 0; i < count; i++){
         printf("%d ", a[i]);
     }
@@ -62,7 +62,7 @@ void heapSort(int *a, int count){
 */
  
     for(i = 0; i < count; i++){
-        key = removeHeap(a, count-i-1);  //´«²Î£ºµÚ¶þ¸ö²ÎÊýÊÇÏÂ±ê
+        key = removeHeap(a, count-i-1);  // 传参：第二个参数是下标
         printf("%d ", key);
     }
     printf("\n");
