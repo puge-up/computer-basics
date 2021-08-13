@@ -40,9 +40,9 @@ void main(void){
     int a[] = {2, 5, 7, 1, 11, 0, 6, 9};
     int count = sizeof(a)/sizeof(int);
  
-    printf("排序前: ");
+    printf("排序前输出如下: ");
     showArray(a, count);
     insertSort(a, count);
-    printf("排序后: ");
+    printf("排序后输出如下: ");
     showArray(a, count); 
 }

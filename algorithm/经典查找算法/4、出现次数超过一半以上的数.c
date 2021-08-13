@@ -35,7 +35,7 @@ void main(void){
 
 	num = findMoreNum(a, count);
 	if(num == NOT_FOUND){
-		printf("Õâ¸öÊý×éÖÐÃ»ÓÐ³¬¹ýÒ»°ëÒÔÉÏµÄÊý×Ö\n");
+		printf("这个数组中没有超过一半以上的数字\n");
 	}else{
 		printf("%d\n", num);
 	}
