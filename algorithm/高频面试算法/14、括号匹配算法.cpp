@@ -16,22 +16,22 @@ boolean backetMatch(char *str){
             s.push(str[i]);
         }else{
             if(s.top() == ')' || s.top() == ']' || s.top() == '}'){
-                return FALSE;  //Ê×ÏÈ³öÏÖÓÒÀ¨ºÅµÄ£¬¿Ï¶¨ÊÇ²»Æ¥ÅäµÄ£»
+                return FALSE;  //首先出现右括号的，肯定是不匹配的；
             }
  
-            if(s.top() == '('){ //Îª'('µÄÇé¿ö
+            if(s.top() == '('){ //为'('的情况
                 if(str[i] == ')'){
                     s.pop();
                 }else{
                     s.push(str[i]);
                 }
-            }else if(s.top() == '['){ //Îª'['µÄÇé¿ö
+            }else if(s.top() == '['){ //为'['的情况
                 if(str[i] == ']'){
                     s.pop();
                 }else{
                     s.push(str[i]);
                 }
-            }else if(s.top() == '{'){ //Îª'{'µÄÇé¿ö
+            }else if(s.top() == '{'){ //为'{'的情况
                 if(str[i] == '}'){
                     s.pop();
                 }else{
@@ -55,9 +55,9 @@ int main(void){
  
     flag = backetMatch(str);
     if(flag){
-        printf("À¨ºÅÆ¥Åä\n");
+        printf("括号匹配\n");
     }else{
-        printf("À¨ºÅ²»Æ¥Åä\n");
+        printf("括号不匹配\n");
     }
      
     return 0;

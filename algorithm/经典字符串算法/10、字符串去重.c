@@ -2,8 +2,8 @@
 
 void main(void){
 	char str[] = "abacdefabcde";
-	char alpha[128] = {0};  //¸¨Öú¿Õ¼ä£¬Í°µÄË¼Ïë
-	char res[80] = {0};  //´æ·ÅÈ¥ÖØºóµÄ½á¹û×Ö·û´®
+	char alpha[128] = {0};  // 辅助空间，桶的思想
+	char res[80] = {0};  // 存放去重后的结果字符串
 	int i;
 	int t = 0;
 

@@ -24,7 +24,8 @@ void showArray(int *a, int count){
     }
     printf("\n"); 
 }
-//ÒÔÏÂ¾ÍÊÇ²åÈëÅÅÐòÁË£¬Ë¼ÏëÍêÈ«Ò»Ñù£¬Ö»²»¹ý²½³¤Îªstep¶øÒÑ£¡£¡£¡
+
+// 以下就是插入排序了，思想完全一样，只不过步长为step而已！！！
 void insertSort(int *a, int count, int step){
     int i;
     int j;
@@ -49,10 +50,10 @@ void main(void){
     int a[] = {2, 7, 1, 11, 0, 9, 8, 10};
     int count = sizeof(a)/sizeof(int);
  
-    printf("ÅÅÐòÇ°Êä³öÈçÏÂ: ");
+    printf("排序前输出如下: ");
     showArray(a, count);
     shellSort(a, count);
-    printf("ÅÅÐòºóÊä³öÈçÏÂ: ");
+    printf("排序后输出如下: ");
     showArray(a, count);
  
 }

@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
 //"a1b2c3ef4"  <===> a=1,b=2,c=3,ef=4;
 void prinT(char *str);
 void prinT(char *str){
@@ -23,5 +22,4 @@ void main(void){
 	printf("str : ");
 	gets(str);
 	prinT(str);
-	
 }
